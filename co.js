@@ -39,5 +39,14 @@ async function start(){
 
     console.log();
     console.log('task 3');
-
+    await co(function* () {
+        return yield Promise.all([
+            axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=Piazza del Сolosseo`)
+        ]);
+    }).then(function (value) {
+        console.log(value[0].data.results[0].formatted_address);
+        value[0].data.results[0].address_components.forEach((component) => {
+            console.log(`   -${component.long_name}`);
+        });
+    });
 }
