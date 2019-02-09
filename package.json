@@ -1,6 +1,6 @@
 {
-    "name": "cwp-09",
-    "author": "Dmitry",
+    "name": "cwp-16",
+    "author": "zemla4ok",
     "dependencies": {
         "async": "^2.6.0",
         "axios": "^0.17.1",
